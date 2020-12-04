@@ -1,0 +1,104 @@
+/*html, body {*/
+/*    background-color: #fff;*/
+/*    color: #636b6f;*/
+/*    font-family: 'Nunito', sans-serif;*/
+/*    font-weight: 200;*/
+/*    height: 100vh;*/
+/*    margin: 0;*/
+/*}*/
+
+/*.full-height {*/
+/*    height: 100vh;*/
+/*}*/
+
+/*.flex-center {*/
+/*    align-items: center;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*.position-ref {*/
+/*    position: relative;*/
+/*}*/
+
+/*.top-right {*/
+/*    position: absolute;*/
+/*    right: 10px;*/
+/*    top: 18px;*/
+/*}*/
+
+/*.content {*/
+/*    text-align: center;*/
+/*}*/
+
+/*.title {*/
+/*    font-size: 84px;*/
+/*}*/
+
+/*.links > a {*/
+/*    color: #636b6f;*/
+/*    padding: 0 25px;*/
+/*    font-size: 13px;*/
+/*    font-weight: 600;*/
+/*    letter-spacing: .1rem;*/
+/*    text-decoration: none;*/
+/*    text-transform: uppercase;*/
+/*}*/
+
+/*.m-b-md {*/
+/*    margin-bottom: 30px;*/
+/*}*/
+
+
+
+.treeline, .treeline ul, .treeline li {
+    margin: 0; padding: 0; line-height: 1.2; list-style: none;
+}
+.treeline ul {margin: 0 0 0 15px; /* отступ вертикальной линии */}
+.treeline > li:not(:only-child), .treeline li li {
+    position: relative;
+    padding: 3px 0 0 20px; /* отступ текста */
+}
+/* Стиль вертикальной линии */
+.treeline li:not(:last-child) { border-left: 1px solid green;}
+/* Стили горизонтальной линии*/
+.treeline li li:before, .treeline > li:not(:only-child):before {
+    content: ""; position: absolute; top: 0; left: 0;
+    width: 1.1em; height: .7em; border-bottom:1px solid green;
+}
+/* Вертикальная линия последнего пункта в списка */
+.treeline li:last-child:before {
+    width: calc(1.1em - 1px); border-left: 1px solid green;
+}
+
+
+
+
+.treegorizont {
+    margin: 0 !important; padding: 0 !important; line-height: normal;
+    word-wrap: break-word; word-break: break-all;
+}
+.treegorizont ul {
+    position: relative; display: table-cell; margin: 0 !important;
+    padding: 0 0 0 10px !important; vertical-align: middle;
+}
+.treegorizont li {
+    display: table; position: relative; margin: 0 !important;
+    padding: 0 !important;
+}
+.treegorizont div {display: table-cell; vertical-align: middle;}
+/* Стили линий */
+.treegorizont ul:before,
+.treegorizont ul li:after,
+.treegorizont ul li:not(:last-child):not(:first-child):before {
+    content: ""; position: absolute; left: -6px; top: 0;
+    width: 3px; height: 50%; border-bottom: 1px solid #ccc;
+}
+.treegorizont ul:before {left: 0;}
+.treegorizont ul li:not(:only-child):after {border-left: 1px solid #ccc;}
+.treegorizont ul li:not(:only-child):first-child:after {
+    top: 50%; border-top: 1px solid #ccc; border-bottom-color: transparent;
+}
+.treegorizont ul li:not(:last-child):not(:first-child):before {
+    height: 100%; border-left: 1px solid #ccc; border-bottom-color: transparent;
+}
